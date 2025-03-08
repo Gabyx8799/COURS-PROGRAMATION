@@ -31,6 +31,7 @@
             border-radius: 20px;
             padding: 40px;
             width: 90%;
+            text-align: center;
             max-width: 800px;
             box-shadow: 0 0 30px dimgrey;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -100,30 +101,31 @@
             justify-content: space-between;
             margin-top: 30px;
         }
-    
+       .img{
+        max-width: 300px;
+        max-height: 300px;
+        border: 10px solid rgb(255, 255, 255);
+        border-radius: 10px
+
+       }
+       .re-btn {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+.txt{font-size: 40px;}
     
     </style>
 </head>
 <body>
     <div class="quiz-container">
-        <h1 class="py-6 text-center bold text-2xl font-mono"> Tu es {{nom_vainqueur}} :</h1>
-
-        <main class="text-center">
-            <div class = "flex py-8 justify-center">
-               <img src="/static/{{vainqueur}}.png">
-            </div>
-            <p class="py-6 text-center bold text-2xl font-mono">{{description}}</p>
-            <div class="pt-10">
-                 <a class= "font-mono bg-transparent text-yellow-300 border border-yellow-300 py-2 px-4 rounded hover:bg-yellow-400 hover:text-white transition font-semibold text-2xl m-7" href="/index"> On recommence ! </a>
-            </div>
-         </main>
-    
-        <footer class="bg-yellow-300 fixed bottom-0 w-full">
-            <h1 class="py-2 text-center bold text-white font-mono"> Copyright @ Nintendo</h1>
-        </footer>
-     
-    
+            <p class="txt">{{description}}</p>
+            <!-- <img  src="https://i.pinimg.com/736x/56/99/76/569976a6a9b483d9bcf4da782552f7d1.jpg" class="img"> -->
+             <a class="re-btn" href="/"> Recommencer </a>
     </div>
-
 </body>
 </html>
