@@ -8,10 +8,10 @@ questions = [
     },
     {    
         "enonce": "Quel est ton item consommable ou de rotation préféré ?",
-        "Perso1":"grenade répulsive",
-        "Perso2":"kit de soin",
-        "Perso3":"grappin",
-        "Perso4":"mini potion"
+        "Perso1":"Grenade répulsive",
+        "Perso2":"Kit de soin",
+        "Perso3":"Grappin",
+        "Perso4":"Mini potion"
       },
        {    
         "enonce": "Quel est ton mode Battle Royale préféré ?",

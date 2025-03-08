@@ -1,28 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>QUIZZ</title>
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.AGW4XjDt7_gO19yAP-e3HwHaHa?rs=1&pid=ImgDetMain" />
+   
+    <script src="https://cdn.tailwindcss.com"></script>
 
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+    
+        body {
+            min-height: 100vh;
+            background: linear-gradient(45deg, red, midnightblue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+    
+        .quiz-container {
+            background: black;
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 0 30px dimgrey;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    
+        .question-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    
+        .question-title {
+            font-size: 2.5em;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            margin-bottom: 10px;
+        }
+    
+        .question-text {
+            font-size: 1.5em;
+            line-height: 1.6;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    
+        .answers-container {
+            display: grid;
+            gap: 15px;
+            margin: 30px 0;
+        }
+    
+        .answer-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            text-decoration:none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    
+        .answer-btn:hover {
+            background: grey;
+            box-shadow: 0 0 15px dimgrey;
+        }
+    
+        .separation-bar {
+            height: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            margin: 20px 0;
+        }
+    
+        .separation-color{
+            height: 100%;
+            background: linear-gradient(90deg,midnightblue,rgb(255, 0, 0));
+            width: 100%;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+    
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+    
+    
+    </style>
 </head>
 <body>
-    <header class="bg-yellow-300">
-        <h1 class="py-6 text-center bold text-2xl font-mono"></h1>
+    <div class="quiz-container">
+        <h1 class="py-6 text-center bold text-2xl font-mono"> Tu es {{nom_vainqueur}} :</h1>
 
-    </header>
-    <main class="text-center">
-        <h1 class="py-6 text-center bold text-xl font-mono"></h1>
-        <div class = "flex py-8 justify-center">
-        </div>
+        <main class="text-center">
+            <div class = "flex py-8 justify-center">
+               <img src="/static/{{vainqueur}}.png">
+            </div>
+            <p class="py-6 text-center bold text-2xl font-mono">{{description}}</p>
+            <div class="pt-10">
+                 <a class= "font-mono bg-transparent text-yellow-300 border border-yellow-300 py-2 px-4 rounded hover:bg-yellow-400 hover:text-white transition font-semibold text-2xl m-7" href="/index"> On recommence ! </a>
+            </div>
+         </main>
+    
+        <footer class="bg-yellow-300 fixed bottom-0 w-full">
+            <h1 class="py-2 text-center bold text-white font-mono"> Copyright @ Nintendo</h1>
+        </footer>
+     
+    
+    </div>
 
-        <div class="pt-10">
-
-        </div>
-     </main>
-
-    <footer class="bg-yellow-300 fixed bottom-0 w-full">
-        <h1 class="py-2 text-center bold font-mono"> Copyright @ Fortnite</h1>
-    </footer>
 </body>
 </html>
